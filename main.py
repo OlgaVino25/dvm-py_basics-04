@@ -16,7 +16,7 @@ Image.blend(cropped_b, cropped_bl, 0.5)
 
 cropped_g = green.crop((50, 0, green.width - 50, green.height))
 
-new_image = Image.merge('RGB', (Image.blend(cropped_r, cropped_re, 0.2), Image.blend(cropped_b, cropped_bl, 0.5), cropped_g)).save('new.jpg')
+new_image = Image.merge('RGB', (Image.blend(cropped_r, cropped_re, 0.2), cropped_g, Image.blend(cropped_b, cropped_bl, 0.5))).save('new.jpg')
 
 image_new = Image.open('new.jpg')
 image_new.thumbnail((80, 80))
